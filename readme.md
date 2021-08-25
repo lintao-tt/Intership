@@ -6,3 +6,4 @@
 ### 5.当前电脑输入法需设置为中文输入法
 ### 6.所需的Python第三方库支持：requests、ast、calendar、pymysql、pyautogui、time、re、os
 ### 7.当前测试样机屏幕参数：15.6寸，1920x1080
+### 8.执行程序时需将登陆过系统所保存的登录信息进行清除
