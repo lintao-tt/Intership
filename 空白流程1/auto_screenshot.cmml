@@ -1,0 +1,461 @@
+<Activity mc:Ignorable="sap sap2010 sads" x:Class="进入系统" sap2010:WorkflowViewState.IdRef="Sequence7_1"
+ xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+ xmlns:cmipa="http://ipa.cmipa.cn/workflow/activities"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger"
+ xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
+ xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
+ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
+ xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.Windows.Markup</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Flowchart DisplayName="流程图" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+    <Flowchart.Variables>
+      <Variable x:TypeArguments="x:String" Name="code" />
+      <Variable x:TypeArguments="x:String" Name="temp" />
+      <Variable x:TypeArguments="x:String" Name="account" />
+      <Variable x:TypeArguments="x:String" Name="password" />
+      <Variable x:TypeArguments="x:String" Name="phone" />
+    </Flowchart.Variables>
+    <Flowchart.StartNode>
+      <FlowStep x:Name="__ReferenceID2" sap2010:WorkflowViewState.IdRef="FlowStep_63">
+        <cmipa:InputDialogActivity InputString="{x:Null}" OptionsTextBox="{x:Null}" DisplayName="输入对话框" sap2010:WorkflowViewState.IdRef="InputDialogActivity_13" IsPassword="False" LabelTextBox="请输入账号：" Result="[account]" TitleTextBox="账号" />
+        <FlowStep.Next>
+          <FlowStep x:Name="__ReferenceID1" sap2010:WorkflowViewState.IdRef="FlowStep_62">
+            <cmipa:InputDialogActivity InputString="{x:Null}" OptionsTextBox="{x:Null}" DisplayName="输入对话框" sap2010:WorkflowViewState.IdRef="InputDialogActivity_12" IsPassword="False" LabelTextBox="请输入密码：" Result="[password]" TitleTextBox="密码" />
+            <FlowStep.Next>
+              <FlowStep x:Name="__ReferenceID0" sap2010:WorkflowViewState.IdRef="FlowStep_61">
+                <cmipa:InputDialogActivity InputString="{x:Null}" OptionsTextBox="{x:Null}" DisplayName="输入对话框" sap2010:WorkflowViewState.IdRef="InputDialogActivity_11" IsPassword="False" LabelTextBox="请输入电话：" Result="[phone]" TitleTextBox="电话" />
+                <FlowStep.Next>
+                  <FlowStep x:Name="__ReferenceID3" sap2010:WorkflowViewState.IdRef="FlowStep_64">
+                    <cmipa:OpenBrowser Browser="{x:Null}" BrowserPath="{x:Null}" StartArgs="{x:Null}" loadTime="{x:Null}" BrowserType="Chrome" ContinueOnError="False" DisplayName="打开浏览器" sap2010:WorkflowViewState.IdRef="OpenBrowser_17" OverTime="10000" Url="https://ng4a.gmcc.net/iga/login_gd.html">
+                      <cmipa:OpenBrowser.Body>
+                        <ActivityAction x:TypeArguments="x:Object">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="x:Object" Name="OpenBrowser" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                            <cmipa:TypeIntoActivity Element="{x:Null}" ClickType="0" ContinueOnError="False" CursorPosition="0" DelayAfter="300" DelayBefore="300" DisplayName="输入文本" sap2010:WorkflowViewState.IdRef="TypeIntoActivity_53" IsMouseMove="True" IsOffsetPoint="False" MouseButton="0" MoveOffsetX="0" MoveOffsetY="0" Opera_type="系统" Selector="&lt;ChromeNode type='object'&gt;&lt;wnd type='array'&gt;&lt;item type='object'&gt;&lt;cls type='string'&gt;Chrome_WidgetWin_1&lt;/cls&gt;&lt;title type='string'&gt;*&lt;/title&gt;&lt;app type='string'&gt;chrome&lt;/app&gt;&lt;/item&gt;&lt;item type='object'&gt;&lt;cls type='string'&gt;Chrome_RenderWidgetHostHWND&lt;/cls&gt;&lt;title type='string'&gt;Chrome Legacy Window&lt;/title&gt;&lt;/item&gt;&lt;/wnd&gt;&lt;html type='array'&gt;&lt;item type='object'&gt;&lt;tag type='string'&gt;INPUT&lt;/tag&gt;&lt;id type='string'&gt;user_sms&lt;/id&gt;&lt;/item&gt;&lt;/html&gt;&lt;/ChromeNode&gt;" SourceImgPath="4bf957bb631a4dd1ab505bf8359a50de.png" Text="[account]" isRunClick="True" offsetX="1639" offsetY="363" usePoint="False" visibility="Visible">
+                              <cmipa:TypeIntoActivity.KeyTypes>
+                                <x:String>Special Keys</x:String>
+                                <x:String>Add</x:String>
+                                <x:String>Alt</x:String>
+                                <x:String>Back</x:String>
+                                <x:String>CapsLock</x:String>
+                                <x:String>Control</x:String>
+                                <x:String>Decimal</x:String>
+                                <x:String>Delete</x:String>
+                                <x:String>Divide</x:String>
+                                <x:String>Down</x:String>
+                                <x:String>End</x:String>
+                                <x:String>Enter</x:String>
+                                <x:String>Esc</x:String>
+                                <x:String>F1</x:String>
+                                <x:String>F2</x:String>
+                                <x:String>F3</x:String>
+                                <x:String>F4</x:String>
+                                <x:String>F5</x:String>
+                                <x:String>F6</x:String>
+                                <x:String>F7</x:String>
+                                <x:String>F8</x:String>
+                                <x:String>F9</x:String>
+                                <x:String>F9</x:String>
+                                <x:String>F10</x:String>
+                                <x:String>F11</x:String>
+                                <x:String>F12</x:String>
+                                <x:String>Home</x:String>
+                                <x:String>Insert</x:String>
+                                <x:String>Left</x:String>
+                                <x:String>Multiply</x:String>
+                                <x:String>Numlock</x:String>
+                                <x:String>KEY_0</x:String>
+                                <x:String>KEY_1</x:String>
+                                <x:String>KEY_2</x:String>
+                                <x:String>KEY_3</x:String>
+                                <x:String>KEY_4</x:String>
+                                <x:String>KEY_5</x:String>
+                                <x:String>KEY_6</x:String>
+                                <x:String>KEY_7</x:String>
+                                <x:String>KEY_8</x:String>
+                                <x:String>KEY_9</x:String>
+                                <x:String>KEY_A</x:String>
+                                <x:String>KEY_B</x:String>
+                                <x:String>KEY_C</x:String>
+                                <x:String>Pause</x:String>
+                                <x:String>PAGE_UP</x:String>
+                                <x:String>PAGE_DOWN</x:String>
+                                <x:String>Right</x:String>
+                                <x:String>Scroll</x:String>
+                                <x:String>Shift</x:String>
+                                <x:String>Sleep</x:String>
+                                <x:String>Subtract</x:String>
+                                <x:String>Tab</x:String>
+                                <x:String>Up</x:String>
+                              </cmipa:TypeIntoActivity.KeyTypes>
+                            </cmipa:TypeIntoActivity>
+                            <cmipa:TypeIntoActivity Element="{x:Null}" ClickType="0" ContinueOnError="False" CursorPosition="0" DelayAfter="300" DelayBefore="300" DisplayName="输入文本" sap2010:WorkflowViewState.IdRef="TypeIntoActivity_54" IsMouseMove="False" IsOffsetPoint="False" MouseButton="0" MoveOffsetX="0" MoveOffsetY="0" Opera_type="系统" Selector="&lt;ChromeNode type='object'&gt;&lt;wnd type='array'&gt;&lt;item type='object'&gt;&lt;cls type='string'&gt;Chrome_WidgetWin_1&lt;/cls&gt;&lt;title type='string'&gt;*&lt;/title&gt;&lt;app type='string'&gt;chrome&lt;/app&gt;&lt;/item&gt;&lt;item type='object'&gt;&lt;cls type='string'&gt;Chrome_RenderWidgetHostHWND&lt;/cls&gt;&lt;title type='string'&gt;Chrome Legacy Window&lt;/title&gt;&lt;/item&gt;&lt;/wnd&gt;&lt;html type='array'&gt;&lt;item type='object'&gt;&lt;tag type='string'&gt;INPUT&lt;/tag&gt;&lt;id type='string'&gt;token_sms&lt;/id&gt;&lt;/item&gt;&lt;/html&gt;&lt;/ChromeNode&gt;" SourceImgPath="261d383dc51942529c2eb4bc88ba01c6.png" Text="[password]" isRunClick="True" offsetX="1639" offsetY="440" usePoint="False" visibility="Visible">
+                              <cmipa:TypeIntoActivity.KeyTypes>
+                                <x:String>Special Keys</x:String>
+                                <x:String>Add</x:String>
+                                <x:String>Alt</x:String>
+                                <x:String>Back</x:String>
+                                <x:String>CapsLock</x:String>
+                                <x:String>Control</x:String>
+                                <x:String>Decimal</x:String>
+                                <x:String>Delete</x:String>
+                                <x:String>Divide</x:String>
+                                <x:String>Down</x:String>
+                                <x:String>End</x:String>
+                                <x:String>Enter</x:String>
+                                <x:String>Esc</x:String>
+                                <x:String>F1</x:String>
+                                <x:String>F2</x:String>
+                                <x:String>F3</x:String>
+                                <x:String>F4</x:String>
+                                <x:String>F5</x:String>
+                                <x:String>F6</x:String>
+                                <x:String>F7</x:String>
+                                <x:String>F8</x:String>
+                                <x:String>F9</x:String>
+                                <x:String>F9</x:String>
+                                <x:String>F10</x:String>
+                                <x:String>F11</x:String>
+                                <x:String>F12</x:String>
+                                <x:String>Home</x:String>
+                                <x:String>Insert</x:String>
+                                <x:String>Left</x:String>
+                                <x:String>Multiply</x:String>
+                                <x:String>Numlock</x:String>
+                                <x:String>KEY_0</x:String>
+                                <x:String>KEY_1</x:String>
+                                <x:String>KEY_2</x:String>
+                                <x:String>KEY_3</x:String>
+                                <x:String>KEY_4</x:String>
+                                <x:String>KEY_5</x:String>
+                                <x:String>KEY_6</x:String>
+                                <x:String>KEY_7</x:String>
+                                <x:String>KEY_8</x:String>
+                                <x:String>KEY_9</x:String>
+                                <x:String>KEY_A</x:String>
+                                <x:String>KEY_B</x:String>
+                                <x:String>KEY_C</x:String>
+                                <x:String>Pause</x:String>
+                                <x:String>PAGE_UP</x:String>
+                                <x:String>PAGE_DOWN</x:String>
+                                <x:String>Right</x:String>
+                                <x:String>Scroll</x:String>
+                                <x:String>Shift</x:String>
+                                <x:String>Sleep</x:String>
+                                <x:String>Subtract</x:String>
+                                <x:String>Tab</x:String>
+                                <x:String>Up</x:String>
+                              </cmipa:TypeIntoActivity.KeyTypes>
+                            </cmipa:TypeIntoActivity>
+                            <cmipa:MessageVerifyActivity IsOverTime="{x:Null}" DisplayName="短信验证码(结合APP)" sap2010:WorkflowViewState.IdRef="MessageVerifyActivity_18" OverTime="300" Tel="[phone]" VerCode="[code]" WaitTime="300">
+                              <cmipa:MessageVerifyActivity.Body>
+                                <ActivityAction x:TypeArguments="x:Object">
+                                  <ActivityAction.Argument>
+                                    <DelegateInArgument x:TypeArguments="x:Object" Name="MessageVerify" />
+                                  </ActivityAction.Argument>
+                                  <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_34">
+                                    <cmipa:ClickActivity Element="{x:Null}" KeyModifiers="{x:Null}" Bottom="539" ClickType="0" ContinueOnError="False" CursorPosition="0" DelayAfter="300" DelayBefore="300" DisplayName="单击" sap2010:WorkflowViewState.IdRef="ClickActivity_120" IsMouseMove="False" IsOffsetPoint="False" Left="1688" MouseButton="0" MoveOffsetX="0" MoveOffsetY="0" Opera_type="系统" OverTime="10000" Right="1772" Selector="&lt;ChromeNode type='object'&gt;&lt;wnd type='array'&gt;&lt;item type='object'&gt;&lt;cls type='string'&gt;Chrome_WidgetWin_1&lt;/cls&gt;&lt;title type='string'&gt;*&lt;/title&gt;&lt;app type='string'&gt;chrome&lt;/app&gt;&lt;/item&gt;&lt;item type='object'&gt;&lt;cls type='string'&gt;Chrome_RenderWidgetHostHWND&lt;/cls&gt;&lt;title type='string'&gt;Chrome Legacy Window&lt;/title&gt;&lt;/item&gt;&lt;/wnd&gt;&lt;html type='array'&gt;&lt;item type='object'&gt;&lt;tag type='string'&gt;A&lt;/tag&gt;&lt;id type='string'&gt;sendSms_btn&lt;/id&gt;&lt;/item&gt;&lt;/html&gt;&lt;/ChromeNode&gt;" SourceImgPath="0ae15d5d831442d29879e37c148b3081.png" Top="495" offsetX="1730" offsetY="517" usePoint="False" visibility="Visible" />
+                                  </Sequence>
+                                </ActivityAction>
+                              </cmipa:MessageVerifyActivity.Body>
+                            </cmipa:MessageVerifyActivity>
+                            <cmipa:TypeIntoActivity Element="{x:Null}" ClickType="0" ContinueOnError="False" CursorPosition="0" DelayAfter="300" DelayBefore="300" DisplayName="输入文本" sap2010:WorkflowViewState.IdRef="TypeIntoActivity_55" IsMouseMove="False" IsOffsetPoint="False" MouseButton="0" MoveOffsetX="0" MoveOffsetY="0" Opera_type="系统" Selector="&lt;ChromeNode type='object'&gt;&lt;wnd type='array'&gt;&lt;item type='object'&gt;&lt;cls type='string'&gt;Chrome_WidgetWin_1&lt;/cls&gt;&lt;title type='string'&gt;*&lt;/title&gt;&lt;app type='string'&gt;chrome&lt;/app&gt;&lt;/item&gt;&lt;item type='object'&gt;&lt;cls type='string'&gt;Chrome_RenderWidgetHostHWND&lt;/cls&gt;&lt;title type='string'&gt;Chrome Legacy Window&lt;/title&gt;&lt;/item&gt;&lt;/wnd&gt;&lt;html type='array'&gt;&lt;item type='object'&gt;&lt;tag type='string'&gt;INPUT&lt;/tag&gt;&lt;id type='string'&gt;msgcode&lt;/id&gt;&lt;/item&gt;&lt;/html&gt;&lt;/ChromeNode&gt;" SourceImgPath="552878e2859b4b0490a7d1efb890d0cc.png" Text="[code]" isRunClick="True" offsetX="1639" offsetY="517" usePoint="False" visibility="Visible">
+                              <cmipa:TypeIntoActivity.KeyTypes>
+                                <x:String>Special Keys</x:String>
+                                <x:String>Add</x:String>
+                                <x:String>Alt</x:String>
+                                <x:String>Back</x:String>
+                                <x:String>CapsLock</x:String>
+                                <x:String>Control</x:String>
+                                <x:String>Decimal</x:String>
+                                <x:String>Delete</x:String>
+                                <x:String>Divide</x:String>
+                                <x:String>Down</x:String>
+                                <x:String>End</x:String>
+                                <x:String>Enter</x:String>
+                                <x:String>Esc</x:String>
+                                <x:String>F1</x:String>
+                                <x:String>F2</x:String>
+                                <x:String>F3</x:String>
+                                <x:String>F4</x:String>
+                                <x:String>F5</x:String>
+                                <x:String>F6</x:String>
+                                <x:String>F7</x:String>
+                                <x:String>F8</x:String>
+                                <x:String>F9</x:String>
+                                <x:String>F9</x:String>
+                                <x:String>F10</x:String>
+                                <x:String>F11</x:String>
+                                <x:String>F12</x:String>
+                                <x:String>Home</x:String>
+                                <x:String>Insert</x:String>
+                                <x:String>Left</x:String>
+                                <x:String>Multiply</x:String>
+                                <x:String>Numlock</x:String>
+                                <x:String>KEY_0</x:String>
+                                <x:String>KEY_1</x:String>
+                                <x:String>KEY_2</x:String>
+                                <x:String>KEY_3</x:String>
+                                <x:String>KEY_4</x:String>
+                                <x:String>KEY_5</x:String>
+                                <x:String>KEY_6</x:String>
+                                <x:String>KEY_7</x:String>
+                                <x:String>KEY_8</x:String>
+                                <x:String>KEY_9</x:String>
+                                <x:String>KEY_A</x:String>
+                                <x:String>KEY_B</x:String>
+                                <x:String>KEY_C</x:String>
+                                <x:String>Pause</x:String>
+                                <x:String>PAGE_UP</x:String>
+                                <x:String>PAGE_DOWN</x:String>
+                                <x:String>Right</x:String>
+                                <x:String>Scroll</x:String>
+                                <x:String>Shift</x:String>
+                                <x:String>Sleep</x:String>
+                                <x:String>Subtract</x:String>
+                                <x:String>Tab</x:String>
+                                <x:String>Up</x:String>
+                              </cmipa:TypeIntoActivity.KeyTypes>
+                            </cmipa:TypeIntoActivity>
+                            <cmipa:ClickActivity Element="{x:Null}" KeyModifiers="{x:Null}" Bottom="642" ClickType="0" ContinueOnError="False" CursorPosition="0" DelayAfter="300" DelayBefore="300" DisplayName="单击" sap2010:WorkflowViewState.IdRef="ClickActivity_121" IsMouseMove="False" IsOffsetPoint="False" Left="1515" MouseButton="0" MoveOffsetX="0" MoveOffsetY="0" Opera_type="系统" OverTime="10000" Right="1577" Selector="&lt;ChromeNode type='object'&gt;&lt;wnd type='array'&gt;&lt;item type='object'&gt;&lt;cls type='string'&gt;Chrome_WidgetWin_1&lt;/cls&gt;&lt;title type='string'&gt;*&lt;/title&gt;&lt;app type='string'&gt;chrome&lt;/app&gt;&lt;/item&gt;&lt;item type='object'&gt;&lt;cls type='string'&gt;Chrome_RenderWidgetHostHWND&lt;/cls&gt;&lt;title type='string'&gt;Chrome Legacy Window&lt;/title&gt;&lt;/item&gt;&lt;/wnd&gt;&lt;html type='array'&gt;&lt;item type='object'&gt;&lt;tag type='string'&gt;SPAN&lt;/tag&gt;&lt;parentid type='string'&gt;login_btn&lt;/parentid&gt;&lt;/item&gt;&lt;/html&gt;&lt;/ChromeNode&gt;" SourceImgPath="91cd2eec9f844a0ebcf1d49557e72508.png" Top="622" offsetX="1546" offsetY="632" usePoint="False" visibility="Visible" />
+                            <cmipa:ClickActivity Element="{x:Null}" KeyModifiers="{x:Null}" Bottom="249" ClickType="0" ContinueOnError="False" CursorPosition="0" DelayAfter="300" DelayBefore="300" DisplayName="单击_1" sap2010:WorkflowViewState.IdRef="ClickActivity_122" IsMouseMove="False" IsOffsetPoint="False" Left="0" MouseButton="0" MoveOffsetX="0" MoveOffsetY="0" Opera_type="系统" OverTime="10000" Right="209" Selector="&lt;ChromeNode type='object'&gt;&lt;wnd type='array'&gt;&lt;item type='object'&gt;&lt;cls type='string'&gt;Chrome_WidgetWin_1&lt;/cls&gt;&lt;title type='string'&gt;*&lt;/title&gt;&lt;app type='string'&gt;chrome&lt;/app&gt;&lt;/item&gt;&lt;item type='object'&gt;&lt;cls type='string'&gt;Chrome_RenderWidgetHostHWND&lt;/cls&gt;&lt;title type='string'&gt;Chrome Legacy Window&lt;/title&gt;&lt;/item&gt;&lt;/wnd&gt;&lt;html type='array'&gt;&lt;item type='object'&gt;&lt;tag type='string'&gt;A&lt;/tag&gt;&lt;parentid type='string'&gt;menu_wrap&lt;/parentid&gt;&lt;aaname type='string'&gt;资源访问&lt;/aaname&gt;&lt;/item&gt;&lt;/html&gt;&lt;/ChromeNode&gt;" SourceImgPath="e3716350afbc4a7a9aa02e0a3eda2dc2.png" Top="205" offsetX="104" offsetY="227" usePoint="False" visibility="Visible" />
+                            <cmipa:ClickActivity Element="{x:Null}" KeyModifiers="{x:Null}" Bottom="293" ClickType="0" ContinueOnError="False" CursorPosition="0" DelayAfter="300" DelayBefore="300" DisplayName="单击_2" sap2010:WorkflowViewState.IdRef="ClickActivity_123" IsMouseMove="False" IsOffsetPoint="False" Left="0" MouseButton="0" MoveOffsetX="0" MoveOffsetY="0" Opera_type="系统" OverTime="10000" Right="209" Selector="&lt;ChromeNode type='object'&gt;&lt;wnd type='array'&gt;&lt;item type='object'&gt;&lt;cls type='string'&gt;Chrome_WidgetWin_1&lt;/cls&gt;&lt;title type='string'&gt;*&lt;/title&gt;&lt;app type='string'&gt;chrome&lt;/app&gt;&lt;/item&gt;&lt;item type='object'&gt;&lt;cls type='string'&gt;Chrome_RenderWidgetHostHWND&lt;/cls&gt;&lt;title type='string'&gt;Chrome Legacy Window&lt;/title&gt;&lt;/item&gt;&lt;/wnd&gt;&lt;html type='array'&gt;&lt;item type='object'&gt;&lt;tag type='string'&gt;A&lt;/tag&gt;&lt;parentid type='string'&gt;menu_wrap&lt;/parentid&gt;&lt;aaname type='string'&gt;全部资源&lt;/aaname&gt;&lt;/item&gt;&lt;/html&gt;&lt;/ChromeNode&gt;" SourceImgPath="32d057fc1d4348cb9ccb87a844ad472b.png" Top="249" offsetX="104" offsetY="271" usePoint="False" visibility="Visible" />
+                            <cmipa:InvokePythonScriptActivity PythonWorkingDirectory="{x:Null}" Code="import pyautogui&#xA;import time&#xA;&#xA;pyautogui.click(300,245)&#xA;pyautogui.typewrite(&quot;ESOP&quot;)&#xA;pyautogui.press(&quot;enter&quot;)&#xA;time.sleep(5)&#xA;&#xA;pyautogui.click(100,900)&#xA;pyautogui.click(1330, 380)&#xA;time.sleep(2)&#xA;pyautogui.click(1330, 420)&#xA;&#xA;time.sleep(5)" ContinueOnError="False" DisplayName="执行Python脚本代码" sap2010:WorkflowViewState.IdRef="InvokePythonScriptActivity_75">
+                              <cmipa:InvokePythonScriptActivity.Arguments>
+                                <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                              </cmipa:InvokePythonScriptActivity.Arguments>
+                              <cmipa:InvokePythonScriptActivity.SysPathAppendList>
+                                <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                              </cmipa:InvokePythonScriptActivity.SysPathAppendList>
+                            </cmipa:InvokePythonScriptActivity>
+                            <cmipa:ClickActivity Element="{x:Null}" KeyModifiers="{x:Null}" Bottom="393" ClickType="0" ContinueOnError="False" CursorPosition="0" DelayAfter="300" DelayBefore="300" DisplayName="单击" sap2010:WorkflowViewState.IdRef="ClickActivity_124" IsMouseMove="False" IsOffsetPoint="False" Left="1754" MouseButton="0" MoveOffsetX="0" MoveOffsetY="0" Opera_type="系统" OverTime="10000" Right="1780" Selector="&lt;ChromeNode type='object'&gt;&lt;wnd type='array'&gt;&lt;item type='object'&gt;&lt;cls type='string'&gt;Chrome_WidgetWin_1&lt;/cls&gt;&lt;title type='string'&gt;*&lt;/title&gt;&lt;app type='string'&gt;chrome&lt;/app&gt;&lt;/item&gt;&lt;item type='object'&gt;&lt;cls type='string'&gt;Chrome_RenderWidgetHostHWND&lt;/cls&gt;&lt;title type='string'&gt;Chrome Legacy Window&lt;/title&gt;&lt;/item&gt;&lt;/wnd&gt;&lt;html type='array'&gt;&lt;item type='object'&gt;&lt;tag type='string'&gt;IFRAME&lt;/tag&gt;&lt;id type='string'&gt;frame_content&lt;/id&gt;&lt;/item&gt;&lt;item type='object'&gt;&lt;tag type='string'&gt;A&lt;/tag&gt;&lt;id type='string'&gt;ssoLogin_c930f75e6cfd40de875430ae2843fafa&lt;/id&gt;&lt;/item&gt;&lt;/html&gt;&lt;/ChromeNode&gt;" SourceImgPath="7bfbb971360b4e59bc04556ecc112936.png" Top="378" offsetX="1767" offsetY="385" usePoint="False" visibility="Visible" />
+                            <cmipa:InvokePythonScriptActivity PythonWorkingDirectory="{x:Null}" Code="import time &#xA;&#xA;&#xA;time.sleep(10)" ContinueOnError="False" DisplayName="执行Python脚本代码" sap2010:WorkflowViewState.IdRef="InvokePythonScriptActivity_76">
+                              <cmipa:InvokePythonScriptActivity.Arguments>
+                                <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                              </cmipa:InvokePythonScriptActivity.Arguments>
+                              <cmipa:InvokePythonScriptActivity.SysPathAppendList>
+                                <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                              </cmipa:InvokePythonScriptActivity.SysPathAppendList>
+                            </cmipa:InvokePythonScriptActivity>
+                            <cmipa:GetCookies SourceImgPath="{x:Null}" currBrowser="{x:Null}" ContinueOnError="False" DelayAfter="300" DelayBefore="300" DisplayName="获取网页cookies" sap2010:WorkflowViewState.IdRef="GetCookies_9" cookiesData="[temp]" visibility="Hidden" />
+                            <cmipa:InvokePythonScriptActivity PythonWorkingDirectory="{x:Null}" Code="import time &#xA;import pyautogui&#xA;&#xA;pyautogui.click(100,15)&#xA;time.sleep(5)" ContinueOnError="False" DisplayName="执行Python脚本代码" sap2010:WorkflowViewState.IdRef="InvokePythonScriptActivity_77">
+                              <cmipa:InvokePythonScriptActivity.Arguments>
+                                <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                              </cmipa:InvokePythonScriptActivity.Arguments>
+                              <cmipa:InvokePythonScriptActivity.SysPathAppendList>
+                                <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                              </cmipa:InvokePythonScriptActivity.SysPathAppendList>
+                            </cmipa:InvokePythonScriptActivity>
+                            <cmipa:InvokePythonScriptActivity PythonWorkingDirectory="{x:Null}" Code="import pyautogui&#xA;import time&#xA;&#xA;pyautogui.PAUSE = 1&#xA;pyautogui.click(100,900)&#xA;pyautogui.click(1330, 380)&#xA;time.sleep(2)&#xA;pyautogui.click(1330, 410)&#xA;&#xA;time.sleep(3)" ContinueOnError="False" DisplayName="执行Python脚本代码" sap2010:WorkflowViewState.IdRef="InvokePythonScriptActivity_78">
+                              <cmipa:InvokePythonScriptActivity.Arguments>
+                                <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                              </cmipa:InvokePythonScriptActivity.Arguments>
+                              <cmipa:InvokePythonScriptActivity.SysPathAppendList>
+                                <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                              </cmipa:InvokePythonScriptActivity.SysPathAppendList>
+                            </cmipa:InvokePythonScriptActivity>
+                            <cmipa:ClickActivity Element="{x:Null}" KeyModifiers="{x:Null}" Bottom="393" ClickType="0" ContinueOnError="False" CursorPosition="0" DelayAfter="300" DelayBefore="300" DisplayName="单击" sap2010:WorkflowViewState.IdRef="ClickActivity_125" IsMouseMove="False" IsOffsetPoint="False" Left="1754" MouseButton="0" MoveOffsetX="0" MoveOffsetY="0" Opera_type="系统" OverTime="10000" Right="1780" Selector="&lt;ChromeNode type='object'&gt;&lt;wnd type='array'&gt;&lt;item type='object'&gt;&lt;cls type='string'&gt;Chrome_WidgetWin_1&lt;/cls&gt;&lt;title type='string'&gt;*&lt;/title&gt;&lt;app type='string'&gt;chrome&lt;/app&gt;&lt;/item&gt;&lt;item type='object'&gt;&lt;cls type='string'&gt;Chrome_RenderWidgetHostHWND&lt;/cls&gt;&lt;title type='string'&gt;Chrome Legacy Window&lt;/title&gt;&lt;/item&gt;&lt;/wnd&gt;&lt;html type='array'&gt;&lt;item type='object'&gt;&lt;tag type='string'&gt;IFRAME&lt;/tag&gt;&lt;id type='string'&gt;frame_content&lt;/id&gt;&lt;/item&gt;&lt;item type='object'&gt;&lt;tag type='string'&gt;A&lt;/tag&gt;&lt;id type='string'&gt;ssoLogin_c930f75e6cfd40de875430ae2843fafa&lt;/id&gt;&lt;/item&gt;&lt;/html&gt;&lt;/ChromeNode&gt;" SourceImgPath="7bfbb971360b4e59bc04556ecc112936.png" Top="378" offsetX="1767" offsetY="385" usePoint="False" visibility="Visible" />
+                            <cmipa:InvokePythonScriptActivity PythonWorkingDirectory="{x:Null}" Code="import time &#xA;&#xA;&#xA;time.sleep(7)" ContinueOnError="False" DisplayName="执行Python脚本代码" sap2010:WorkflowViewState.IdRef="InvokePythonScriptActivity_79">
+                              <cmipa:InvokePythonScriptActivity.Arguments>
+                                <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                              </cmipa:InvokePythonScriptActivity.Arguments>
+                              <cmipa:InvokePythonScriptActivity.SysPathAppendList>
+                                <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                              </cmipa:InvokePythonScriptActivity.SysPathAppendList>
+                            </cmipa:InvokePythonScriptActivity>
+                            <cmipa:InvokePythonScriptActivity PythonWorkingDirectory="{x:Null}" Code="import time &#xA;import pyautogui&#xA;pyautogui.PAUSE = 1&#xA;&#xA;pyautogui.click(100,100)&#xA;pyautogui.click(800,200)&#xA;pyautogui.click(800,235)&#xA;pyautogui.click(1200,475)&#xA;pyautogui.click(100,100)&#xA;&#xA;time.sleep(10)" ContinueOnError="False" DisplayName="执行Python脚本代码" sap2010:WorkflowViewState.IdRef="InvokePythonScriptActivity_80">
+                              <cmipa:InvokePythonScriptActivity.Arguments>
+                                <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                              </cmipa:InvokePythonScriptActivity.Arguments>
+                              <cmipa:InvokePythonScriptActivity.SysPathAppendList>
+                                <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                              </cmipa:InvokePythonScriptActivity.SysPathAppendList>
+                            </cmipa:InvokePythonScriptActivity>
+                            <cmipa:InvokePythonScriptActivity PythonWorkingDirectory="{x:Null}" Code="import requests&#xA;import ast&#xA;import calendar&#xA;import pymysql&#xA;import pyautogui&#xA;import time&#xA;import re&#xA;import os&#xA;&#xA;# cookie转换格式&#xA;cookie = &quot;&quot;&#xA;dict = ast.literal_eval(dict)&#xA;headers = {'Cookie':''}&#xA;for key, value in dict.items():&#xA;  cookie += key+&quot;=&quot;+value+&quot;;&quot;&#xA;headers['Cookie'] = cookie&#xA;&#xA;path = &quot;C:\\图片&quot;&#xA;pyautogui.PAUSE = 1&#xA;url = 'http://esop.boss.gmcc.net/esop/oneTimeCostManagement/oneTimeCostApprove/queryWaitApproveList.action'&#xA;params = {&#xA;   &quot;pageInfo.currentPage&quot;: '1',&#xA;   &quot;pageInfo.numPerPage&quot;: '20',&#xA;   'search.region': '756',&#xA;   'search.prodId':'',&#xA;   'search.startDate':'',&#xA;   &quot;search.endDate&quot;:'',&#xA;}&#xA;&#xA;MYSQL_LOCAL = {&#xA;    'host': '10.249.245.100',&#xA;    'port': 3306,&#xA;    'database': 'post_assess',&#xA;    'user': 'root',&#xA;    'password': '123456'&#xA;}&#xA;&#xA;conn = pymysql.connect(host=MYSQL_LOCAL['host'], user=MYSQL_LOCAL['user'], password=MYSQL_LOCAL['password'],&#xA;                               database=MYSQL_LOCAL['database'], charset='utf8')&#xA;cursor = conn.cursor()&#xA;sql = &quot;select product_code, out_bill_time, out_bill_money from ict_product_msg where product_code REGEXP '^[0-9]+$'&quot;&#xA;cursor.execute(sql)&#xA;ID = list(cursor.fetchall())&#xA;&#xA;if not os.path.exists(path):&#xA;    os.makedirs(path)&#xA;&#xA;for i in range(len(ID)):&#xA;    data_list = []&#xA;    params['search.prodId'] = ID[i][0]&#xA;    year = int(ID[i][1][:4])&#xA;    month = int(ID[i][1][5:7])&#xA;    if month == 1:&#xA;        day = calendar.monthrange(year, month+1)[1]&#xA;        params['search.startDate'] = str(year-1) + '-' + str(12) + &quot;-01&quot; + &quot; 00:00:00&quot;&#xA;        params['search.endDate'] = str(year) + '-' + str(month+1) + '-' + str(day) + &quot; 23:59:59&quot;&#xA;    elif month == 12:&#xA;        day = calendar.monthrange(year, 1)[1]&#xA;        params['search.startDate'] = str(year) + '-' + str(month-1) + &quot;-01&quot; + &quot; 00:00:00&quot;&#xA;        params['search.endDate'] = str(year+1) + '-' + str(1) + '-' + str(day) + &quot; 23:59:59&quot;&#xA;    else:&#xA;        day = calendar.monthrange(year, month+1)[1]&#xA;        params['search.startDate'] = str(year) + '-' + str(month-1) + &quot;-01&quot; + &quot; 00:00:00&quot;&#xA;        params['search.endDate'] = str(year) + '-' + str(month+1) + '-' + str(day) + &quot; 23:59:59&quot;&#xA;    response = requests.post(url,headers=headers, params=params)&#xA;    response.encoding = 'utf-8'&#xA;    text = response.text&#xA;    text = ast.literal_eval(text)&#xA;    for j in text['rows']:&#xA;        if float(j['allMoney']) == float(ID[i][-1]):&#xA;            data_list.append(j)&#xA;    if len(data_list) == 0:&#xA;        pass&#xA;    else:&#xA;        for k in range(len(data_list)):&#xA;            name = data_list[k]['appId'] + &quot;-&quot;+data_list[k]['appName']&#xA;            id = data_list[k]['appId']&#xA;            folder_path = path+&quot;\\&quot;+data_list[k]['appName']+'-'+data_list[k]['custName']&#xA;            os.makedirs(folder_path)&#xA;            if i == 0 and k == 0:&#xA;                pyautogui.click(1700,100)&#xA;                pyautogui.press('end')&#xA;                pyautogui.click(1270,125)&#xA;                if id.isdigit():&#xA;                    pyautogui.typewrite(id)&#xA;                else:&#xA;                    pattern_1 = re.compile(&quot;[a-zA-Z]+&quot;)&#xA;                    pattern_2 = re.compile('[0-9]+')&#xA;                    pyautogui.typewrite(pattern_1.findall(id)[0])&#xA;                    pyautogui.press('space')&#xA;                    pyautogui.typewrite(pattern_2.findall(id)[0])&#xA;                pyautogui.click(1130, 250)&#xA;                time.sleep(1.5)&#xA;            else:&#xA;                pyautogui.press('end')&#xA;                pyautogui.click(1250,290)&#xA;                if id.isdigit():&#xA;                    pyautogui.typewrite(id)&#xA;                else:&#xA;                    pattern_1 = re.compile(&quot;[a-zA-Z]+&quot;)&#xA;                    pattern_2 = re.compile('[0-9]+')&#xA;                    pyautogui.typewrite(pattern_1.findall(id)[0])&#xA;                    pyautogui.press('space')&#xA;                    pyautogui.typewrite(pattern_2.findall(id)[0])&#xA;                pyautogui.click(1140,415)&#xA;                time.sleep(1.5)&#xA;            pyautogui.press('end')&#xA;            pyautogui.click(550, 500)&#xA;            time.sleep(2)&#xA;            pyautogui.press('home')&#xA;            pyautogui.screenshot(folder_path+&quot;\\&quot;+name+&quot;_1.png&quot;)&#xA;            pyautogui.press('end')&#xA;            pyautogui.screenshot(folder_path+&quot;\\&quot;+name+&quot;_2.png&quot;)&#xA;            pyautogui.press('home')&#xA;            pyautogui.click(600,265)&#xA;            pyautogui.press('end')&#xA;            pyautogui.click(1250,290)&#xA;            pyautogui.hotkey('ctrl', 'a')&#xA;            pyautogui.press('delete')&#xA;" ContinueOnError="False" DisplayName="执行Python脚本代码" sap2010:WorkflowViewState.IdRef="InvokePythonScriptActivity_81">
+                              <cmipa:InvokePythonScriptActivity.Arguments>
+                                <InArgument x:TypeArguments="x:String" x:Key="dict">[temp]</InArgument>
+                              </cmipa:InvokePythonScriptActivity.Arguments>
+                              <cmipa:InvokePythonScriptActivity.SysPathAppendList>
+                                <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                              </cmipa:InvokePythonScriptActivity.SysPathAppendList>
+                            </cmipa:InvokePythonScriptActivity>
+                          </Sequence>
+                        </ActivityAction>
+                      </cmipa:OpenBrowser.Body>
+                    </cmipa:OpenBrowser>
+                  </FlowStep>
+                </FlowStep.Next>
+              </FlowStep>
+            </FlowStep.Next>
+          </FlowStep>
+        </FlowStep.Next>
+      </FlowStep>
+    </Flowchart.StartNode>
+    <x:Reference>__ReferenceID0</x:Reference>
+    <x:Reference>__ReferenceID1</x:Reference>
+    <x:Reference>__ReferenceID2</x:Reference>
+    <x:Reference>__ReferenceID3</x:Reference>
+    <sads:DebugSymbol.Symbol>dw1DOlxFbXB0eS54YW1sAA==</sads:DebugSymbol.Symbol>
+  </Flowchart>
+  <sap2010:WorkflowViewState.ViewStateManager>
+    <sap2010:ViewStateManager>
+      <sap2010:ViewStateData Id="InputDialogActivity_13" sap:VirtualizedContainerService.HintSize="200,53">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="InputDialogActivity_12" sap:VirtualizedContainerService.HintSize="200,53">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="InputDialogActivity_11" sap:VirtualizedContainerService.HintSize="200,53">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="TypeIntoActivity_53" sap:VirtualizedContainerService.HintSize="749,151" />
+      <sap2010:ViewStateData Id="TypeIntoActivity_54" sap:VirtualizedContainerService.HintSize="749,151" />
+      <sap2010:ViewStateData Id="ClickActivity_120" sap:VirtualizedContainerService.HintSize="274,116">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Sequence_34" sap:VirtualizedContainerService.HintSize="296,240">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="MessageVerifyActivity_18" sap:VirtualizedContainerService.HintSize="749,304" />
+      <sap2010:ViewStateData Id="TypeIntoActivity_55" sap:VirtualizedContainerService.HintSize="749,151" />
+      <sap2010:ViewStateData Id="ClickActivity_121" sap:VirtualizedContainerService.HintSize="749,116" />
+      <sap2010:ViewStateData Id="ClickActivity_122" sap:VirtualizedContainerService.HintSize="749,116">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="ClickActivity_123" sap:VirtualizedContainerService.HintSize="749,116">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="InvokePythonScriptActivity_75" sap:VirtualizedContainerService.HintSize="749,186" />
+      <sap2010:ViewStateData Id="ClickActivity_124" sap:VirtualizedContainerService.HintSize="749,116" />
+      <sap2010:ViewStateData Id="InvokePythonScriptActivity_76" sap:VirtualizedContainerService.HintSize="749,186" />
+      <sap2010:ViewStateData Id="GetCookies_9" sap:VirtualizedContainerService.HintSize="749,22" />
+      <sap2010:ViewStateData Id="InvokePythonScriptActivity_77" sap:VirtualizedContainerService.HintSize="749,186" />
+      <sap2010:ViewStateData Id="InvokePythonScriptActivity_78" sap:VirtualizedContainerService.HintSize="749,186" />
+      <sap2010:ViewStateData Id="ClickActivity_125" sap:VirtualizedContainerService.HintSize="749,116" />
+      <sap2010:ViewStateData Id="InvokePythonScriptActivity_79" sap:VirtualizedContainerService.HintSize="749,186" />
+      <sap2010:ViewStateData Id="InvokePythonScriptActivity_80" sap:VirtualizedContainerService.HintSize="749,186" />
+      <sap2010:ViewStateData Id="InvokePythonScriptActivity_81" sap:VirtualizedContainerService.HintSize="749,186" />
+      <sap2010:ViewStateData Id="Sequence_35" sap:VirtualizedContainerService.HintSize="771,3425">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="OpenBrowser_17" sap:VirtualizedContainerService.HintSize="200,53">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="FlowStep_64">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">260,453.5</av:Point>
+            <av:Size x:Key="ShapeSize">200,53</av:Size>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="FlowStep_61">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">270,363.5</av:Point>
+            <av:Size x:Key="ShapeSize">200,53</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">370,416.5 370,446.5 360,446.5 360,453.5</av:PointCollection>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="FlowStep_62">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">270,263.5</av:Point>
+            <av:Size x:Key="ShapeSize">200,53</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">370,316.5 370,363.5</av:PointCollection>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="FlowStep_63">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">280,173.5</av:Point>
+            <av:Size x:Key="ShapeSize">200,53</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">380,226.5 380,256.5 370,256.5 370,263.5</av:PointCollection>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Flowchart_1" sap:VirtualizedContainerService.HintSize="1174,636">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <av:Point x:Key="ShapeLocation">350,2.5</av:Point>
+            <av:Size x:Key="ShapeSize">60,75</av:Size>
+            <x:Double x:Key="Width">1160</x:Double>
+            <av:PointCollection x:Key="ConnectorLocation">380,77.5 380,173.5</av:PointCollection>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Sequence7_1" sap:VirtualizedContainerService.HintSize="1214,716" />
+    </sap2010:ViewStateManager>
+  </sap2010:WorkflowViewState.ViewStateManager>
+</Activity>
